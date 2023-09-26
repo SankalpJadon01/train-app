@@ -1,0 +1,27 @@
+<form (ngSubmit)="save()" class="was-validated">
+<label >Train No</label>
+<input type="number" class="form-control" name="trainNo" [(ngModel)]="t.trainNo"  required pattern="[0-9]{3,}">
+<br>
+<label >Train Name</label>
+<input type="text" class="form-control" name="trainName" [(ngModel)]="t.trainName" >
+<br>
+<label >Start</label>
+<input type="text" class="form-control" name="start" [(ngModel)]="t.start" >
+<br>
+<label >End</label>
+<input type="text" class="form-control" name="end" [(ngModel)]="t.end" >
+<br>
+<label >Type</label>
+<input type="text" class="form-control" name="type" [(ngModel)]="t.type" >
+<br>
+<!-- <br>
+<select name="source" class="form-control" [(ngModel)]="flights.source"  required pattern="[A-Za-z0-9]{1,10}">
+    <option *ngFor="let s of cities" [value]="s">{{s}}</option>
+</select>
+<br>
+<select name="destination" class="form-control" [(ngModel)]="flights.destination"  required pattern="[A-Za-z0-9]{1,10}">
+    <option *ngFor="let d of cities" [value]="d">{{d}}</option>
+</select>
+<br> -->
+<button type="submit" class="btn btn-primary">Save Flight</button>
+</form>

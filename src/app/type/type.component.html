@@ -1,0 +1,187 @@
+<form (ngSubmit)="search()">
+
+    <label>Type:</label>&nbsp;
+
+    <input name="type" [(ngModel)]="type" placeholder="Type" required list="type">
+
+    <datalist id="type">
+
+        <option *ngFor="let t of trains" [value]="t"></option>
+
+
+
+    </datalist>
+
+
+    &nbsp;&nbsp;
+
+
+    <button class="btn btn-success" type="submit">Search Train</button>
+
+
+
+
+
+
+
+</form>
+
+
+
+
+
+
+
+<hr>
+
+
+
+
+
+
+
+<table class="table table-bordered table-dark">
+
+
+
+
+
+
+
+    <thead>
+
+
+
+
+
+
+
+        <tr>
+
+
+
+
+
+
+
+            <th>Train No</th>
+
+
+
+
+
+
+
+            <th>Train Name</th>
+
+
+
+            <th>Type</th>
+
+
+
+
+
+
+
+            <th>Start</th>
+
+
+
+
+
+
+
+            <th>End</th>
+
+
+
+
+
+
+
+        </tr>
+
+
+
+
+
+
+
+    </thead>
+
+
+
+
+
+
+
+    <tbody>
+
+
+
+
+
+
+
+        <tr *ngFor="let t of trains">
+
+
+
+
+
+
+
+            <td>{{t.trainNo}}</td>
+
+
+
+
+
+
+
+            <td>{{t.trainName}}</td>
+
+
+
+            <td>{{t.type}}</td>
+
+
+
+
+
+
+
+            <td>{{t.start}}</td>
+
+
+
+
+
+
+
+            <td>{{t.end}}</td>
+
+
+
+
+
+
+
+        </tr>
+
+
+
+
+
+
+
+    </tbody>
+
+
+
+
+
+
+
+</table>
